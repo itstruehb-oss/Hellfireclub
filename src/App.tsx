@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'motion/react';
 import { 
   Globe, 
@@ -17,12 +17,13 @@ import {
   X
 } from 'lucide-react';
 
-import victoria_phoenix_img from './assets/images/victoria_phoenix_1779467501745.png';
+import victoria_phoenix_img from './assets/images/victoria_phoenix_real.jpg';
+import lilith_hell_img from './assets/images/lilith_hell_real.png';
 
 // Image assets with absolute fallbacks referring to original assets
 const x5_img = "https://vite-deploy--vsolotuche.replit.app/assets/Captura_de_pantalla_2026-05-21_211540_1779412983406-CF9zK68e.png";
 const S5_img = "https://vite-deploy--vsolotuche.replit.app/assets/image_1779413142882-CQMJuicP.png";
-const T5_img = "https://vite-deploy--vsolotuche.replit.app/assets/image_1779413663124-Dg5ta--f.png";
+const T5_img = lilith_hell_img;
 const w5_img = victoria_phoenix_img;
 const E5_img = "https://vite-deploy--vsolotuche.replit.app/assets/ASFFSASAAFSASFAFSASF_1779414975572-EXETozYt.jpg";
 const A5_img = "https://vite-deploy--vsolotuche.replit.app/assets/asffafaaffs_1779416494920-Dm8_g-lw.png";
@@ -162,6 +163,7 @@ interface EntranceProps {
   children: React.ReactNode;
   delay?: number;
   className?: string;
+  key?: any;
 }
 
 function Xe({ children, delay = 0, className = "" }: EntranceProps) {
@@ -320,7 +322,7 @@ function O5() {
                 San Francisco, París, Hong Kong y Londres
               </span>
               , todas ellas supervisadas por el Círculo Interno, que a su vez es dirigido por el Lord Imperial.{" "}
-              <span style={{ color: "#E8E1D4", fontStyle: "italic" }}>Eve Frost</span>
+              <span style={{ color: "#E8E1D4", fontStyle: "italic" }}>Eve White</span>
               , quien ascendió como la espuma bajo el título de{" "}
               <span style={{ color: "#C6A15B" }} className="font-semibold font-serif">
                 Reina Blanca
@@ -505,9 +507,9 @@ function InnerCircle() {
     {
       rank: "Reina Blanca",
       type: "queen",
-      name: "Eve Frost",
+      name: "Eve White",
       image: S5_img,
-      description: "Nacida en una cruel y poderosa familia mutante, Eve Frost perfeccionó una telepatía aterradora con la que destruyó políticamente a sus rivales. A los veintiséis años se unió a los X-Men durante una crisis global, pero mantuvo en secreto su liderazgo en el Club, operando siempre por puro pragmatismo.",
+      description: "Nacida en una cruel y poderosa familia mutante, Eve White perfeccionó una telepatía aterradora con la que destruyó políticamente a sus rivales. A los veintiséis años se unió a los X-Men durante una crisis global, pero mantuvo en secreto su liderazgo en el Club, operando siempre por puro pragmatismo.",
       aspirations: "Controlar el mundo en las sombras desde el Hellfire Club, mientras a plena vista es una heroína para el mundo. Poderes: Telepatía · Piel de Diamante."
     },
     {
@@ -532,7 +534,7 @@ function InnerCircle() {
     {
       rank: "Rey Negro",
       type: "king",
-      name: "Damian Hellstorm",
+      name: "Damian Hell",
       image: x5_img,
       description: 'Abrazando su herencia como el "Hijo de Satán", Damian ha decidido usar su intelecto, carisma y misticismo para infiltrarse en las esferas de poder más exclusivas del mundo. Su ingreso al Hellfire Club es un movimiento estratégico para manipular influencias, recursos financieros y secretos arcanos. Su objetivo final es debilitar las barreras místicas de la Tierra para abrir las puertas del plano infernal.',
       aspirations: "Forjar alianzas dentro del Club para financiar y encubrir investigaciones sobre portales interdimensionales. Usar a los miembros como peones inconscientes en un tablero apocalíptico cuyo fin es abrir las puertas para la invasión de las huestes demoníacas. Poderes: Herencia Mística: Alma Oscura · Tridente de Netharium."
@@ -540,7 +542,7 @@ function InnerCircle() {
     {
       rank: "Reina Negra",
       type: "queen",
-      name: "Lilith Hellstorm",
+      name: "Lilith Hell",
       image: T5_img,
       description: "Tras sufrir abuso en su juventud, el trauma despertó su herencia latente como súcubo y su dominio de la magia demoníaca, jurando usar el deseo de los hombres para destruirlos. Fundó un club VIP de ultra lujo para devorar almas y recopilar secretos. Ahora manipula el control político de América y se ha sumado al proyecto MAGA como candidata al Senado.",
       aspirations: "Alcanzar la Secretaría de Salud y Derechos Humanos para moldear las leyes a su antojo y blindarse con un escudo legal impenetrable. Convertirse en la titiritera absoluta de los Estados Unidos combinando ambos mundos. Poderes: Herencia Mística: Súcubo Demoníaco · Tridente de Netharium | Guadaña de las Penas."
@@ -687,9 +689,20 @@ function V5() {
         </div>
 
         <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent mt-16 mb-8" />
-        <p className="text-[#E8E1D4]/40 font-mono text-[10px] uppercase tracking-widest leading-relaxed max-w-3xl mx-auto">
-          Cualquier acceso, recopilación de datos no autorizadas serán castigadas de forma directa por los Reyes del Círculo Interno. · Toda aspiración está basada y confirmada por los usuarios presentes. · Esta página web se considera una página web invicta con todos los derechos reservados © {new Date().getFullYear()} Hellfire Club.
-        </p>
+        <div className="text-[#E8E1D4]/40 font-mono text-[10px] uppercase tracking-widest leading-relaxed max-w-3xl mx-auto space-y-4">
+          <p>
+            El intento de recopilación de datos o la intrusión no autorizada en este sistema provocará la intervención inmediata y represiva de los Reyes del Círculo Interno. La organización opera bajo sus propios protocolos de justicia; cualquier transgresión será castigada de forma sumaria por vías directas, sin mediación ni apelación posible.
+          </p>
+          <p>
+            Ninguna aspiración de las partes involucradas posee validez sin el consenso explícito y la confirmación de los miembros presentes en la sesión.
+          </p>
+          <p>
+            Propiedad intelectual, digital y operativa declarada por la servidora Invicta Metallica.
+          </p>
+          <p>
+            © {new Date().getFullYear()} Hellfire Club. Protegido bajo jurisdicción interna y soberana.
+          </p>
+        </div>
       </div>
     </footer>
   );
@@ -715,7 +728,7 @@ function EventsModal({ isOpen, onClose }: EventsModalProps) {
       date: "10 de Julio, 2026",
       title: "Congregación Anual del Círculo Interno",
       location: "Mansión Club Hellfire, Suite Imperial, Nueva York",
-      desc: "Alineación de tramas financieras globales, votación de vetos mutuos, y reporte parlamentario de Lilith Hellstorm ante el senado místico."
+      desc: "Alineación de tramas financieras globales, votación de vetos mutuos, y reporte parlamentario de Lilith Hell ante el senado místico."
     },
     {
       date: "04 de Agosto, 2026",
