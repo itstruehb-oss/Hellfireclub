@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  
+  --color-primary: #C6A15B;
+  --color-secondary: #0A0A0A;
+  --color-destructive: #6E0B14;
+  --color-background: #050505;
+  --color-foreground: #E8E1D4;
+  --color-muted-foreground: rgba(232, 225, 212, 0.65);
+  --color-accent: #C6A15B;
+  --color-border: rgba(110, 11, 20, 0.25);
+  --color-card: #0A0A0A;
+}
+
+body {
+  background-color: #050505;
+  font-family: var(--font-sans);
+  color: #E8E1D4;
+}
+
+.text-glow {
+  text-shadow: 0 0 16px rgba(198, 161, 91, 0.4);
+}
+
+.vignette {
+  background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.85) 100%);
+}
+
+.bg-radial-glow {
+  background: radial-gradient(circle, rgba(110, 11, 20, 0.15) 0%, transparent 70%);
+}
+
+.glass-panel {
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(198, 161, 91, 0.15);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  border-color: rgba(198, 161, 91, 0.4);
+  box-shadow: 0 0 30px rgba(198, 161, 91, 0.1);
+}
+
+.chess-grid {
+  background-image: radial-gradient(rgba(110, 11, 20, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+

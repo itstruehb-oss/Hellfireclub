@@ -1,0 +1,6 @@
+{
+  "name": "Hellfire Club",
+  "description": "Sitio de membresías de élite y jerarquía del Círculo Interno del Hellfire Club.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
