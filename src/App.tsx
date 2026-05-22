@@ -17,7 +17,7 @@ import {
   X
 } from 'lucide-react';
 
-import victoria_phoenix_img from './assets/images/victoria_phoenix_real.jpg';
+import victoria_phoenix_img from './assets/images/victoria_phoenix_real.png';
 import lilith_hell_img from './assets/images/lilith_hell_real.png';
 
 // Image assets with absolute fallbacks referring to original assets
